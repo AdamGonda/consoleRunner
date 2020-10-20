@@ -1,5 +1,5 @@
 {
-  "name": "consolerunner",
+  "name": "console-runner",
   "version": "1.0.0",
   "description": "A console runner for my tutorial",
   "main": "index.js",
