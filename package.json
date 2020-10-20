@@ -1,0 +1,19 @@
+{
+  "name": "consolerunner",
+  "version": "1.0.0",
+  "description": "A console runner for my tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamGonda/consoleRunner.git"
+  },
+  "author": "Adam Gonda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamGonda/consoleRunner/issues"
+  },
+  "homepage": "https://github.com/AdamGonda/consoleRunner#readme"
+}
