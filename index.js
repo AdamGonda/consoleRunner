@@ -1,4 +1,4 @@
-const { pipe, isInRange, awsd, QUIT } = require('../utils')
+const { pipe, isInRange, awsd, QUIT } = require('./utils')
 const EventEmitter = require('events')
 
 const BACKGROUND = ' '
