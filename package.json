@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AdamGonda/consoleRunner.git"
+    "url": "git+https://github.com/AdamGonda/console-runner.git"
   },
   "author": "Adam Gonda",
   "license": "ISC",
