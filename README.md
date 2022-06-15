@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/AdamGonda/loop/blob/main/logo-v2.png">
+  <img src="https://github.com/AdamGonda/loop/blob/main/logo-v3.png">
 </p>
 
 <h2 align="center">
