@@ -8,7 +8,8 @@
 
 You just have to define your `initial state` and an `update` function,
 then the loop takes care of the rest, it will call `update` in each iteration
-with the `currentState` and `input`, or it will terminate if the `isGameOver` is true or you press `q`.
+with the `currentState` and `input`, or it will terminate if the `isGameOver`
+flag in your state is true or the user presses `q`.
 
 ## Example usage
 
