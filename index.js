@@ -17,7 +17,7 @@ function run({
   dimensions,
   header,
   footer,
-  updateTime = 100, // bigger is slower
+  timeBetweenRender = 100,
   isDebug = true,
 }) {
   let currentState = initialState
@@ -56,7 +56,7 @@ function run({
     )
 
     bridge.input = null
-  }, updateTime)
+  }, timeBetweenRender)
 }
 
 function renderToConsole(
@@ -145,7 +145,7 @@ function validateArgs(args) {
     dimensions,
     header,
     footer,
-    updateTime,
+    timeBetweenRender,
     isDebug,
   } = args
 
@@ -190,8 +190,8 @@ function validateArgs(args) {
     throw Error('footer is not a function.')
   }
 
-  if (updateTime && isNaN(updateTime)) {
-    throw Error('updateTime is not a number.')
+  if (timeBetweenRender && isNaN(timeBetweenRender)) {
+    throw Error('timeBetweenRender is not a number.')
   }
 
   if (isDebug && typeof isDebug === "boolean") {
