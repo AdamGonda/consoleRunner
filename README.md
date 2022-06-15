@@ -28,8 +28,7 @@ run({
 })
 ```
 
-when you run `node ./index.js` it will produce
-a running game which looks like this 👇
+when you run node ./index.js it will produce a running game that looks like this 👇
 
 ```md
 { player: { x: 10, y: 5 } }
