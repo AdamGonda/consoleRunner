@@ -8,7 +8,7 @@ You just have to define your `initial state` and an `update` function
 then the loop takes care of the rest of it, calling update in each iteration
 with the `currentState` and `input` if any, or terminating the cycle if the `isGameOver` is true or you press `q`.
 
-# Example usage
+## Example usage
 
 Install:
 ```console
@@ -48,7 +48,7 @@ input null
 -----------------------
 ```
 
-# API
+## API
 
 Loop exports one function `run`.
 
