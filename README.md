@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://github.com/AdamGonda/loop/blob/main/loop-logo-v3.png">
+  <img src="https://github.com/AdamGonda/loop/blob/main/logo-v2.png">
 </p>
 
 # The missing game loop for your Pure function
