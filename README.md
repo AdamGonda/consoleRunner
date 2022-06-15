@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://github.com/AdamGonda/loop/blob/main/loop-logo.png">
+  <img src="https://github.com/AdamGonda/loop/blob/main/logo-v2.png">
 </p>
 
 A simple game loop in the console, with FP in mind.
