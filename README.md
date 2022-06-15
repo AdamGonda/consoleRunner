@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-  The missing game loop for your Pure function
+  The missing game loop for your Pure function.
 </h2>
 
 You just have to define your `initial state` and an `update` function
