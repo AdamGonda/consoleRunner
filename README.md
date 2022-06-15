@@ -1,8 +1,10 @@
-<p align="left">
+<p align="center">
   <img src="https://github.com/AdamGonda/loop/blob/main/logo-v2.png">
 </p>
 
-## The missing game loop for your Pure function
+<h2 align="center">
+  The missing game loop for your Pure function
+</h2>
 
 You just have to define your `initial state` and an `update` function
 then the loop takes care of the rest of it, calling update in each iteration
