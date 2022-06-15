@@ -2,7 +2,7 @@
   <img src="https://github.com/AdamGonda/loop/blob/main/loop-logo.png">
 </p>
 
-A simple game loop in the console.
+A simple game loop in the console, with FP in mind.
 
 # Example usage
 
