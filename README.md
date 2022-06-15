@@ -1,8 +1,8 @@
 <p align="left">
-  <img width="300" src="https://github.com/AdamGonda/loop/blob/main/loop-logo.png">
+  <img src="https://github.com/AdamGonda/loop/blob/main/loop-logo.png">
 </p>
 
-What is a game without a game loop?
+A simple game loop in the console.
 
 # Example usage
 
