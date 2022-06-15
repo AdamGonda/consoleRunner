@@ -6,7 +6,7 @@
 
 You just have to define your `initial state` and an `update` function
 then the loop takes care of the rest of it, calling update in each iteration
-with the `currentState` and an `input` if any, or terminating the cycle if the `isGameOver` is true or you press `q`.
+with the `currentState` and `input` if any, or terminating the cycle if the `isGameOver` is true or you press `q`.
 
 # Example usage
 
