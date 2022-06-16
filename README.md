@@ -20,7 +20,7 @@ npm install adamgonda/loop
 
 ```js
 // in your index.js
-const { run } = require('console-runner')
+const { run } = require('loop')
 
 run({
   initialState: { player: { x: 10, y: 5, isHappy: true }},
