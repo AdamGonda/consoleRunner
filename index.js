@@ -14,7 +14,6 @@ function run({
   toCommon,
   renderMap,
   inputMap = awsd,
-  dimensions,
   header,
   footer,
   timeBetweenRender = 100,
@@ -48,7 +47,6 @@ function run({
       currentState,
       toCommon,
       renderMap,
-      dimensions,
       header,
       footer,
       isDebug,
@@ -63,13 +61,12 @@ function renderToConsole(
   state,
   toCommon,
   renderMap,
-  dimensions,
   header,
   footer,
   isDebug,
   input,
 ) {
-  const { width, height } = dimensions
+  const { width, height } = toZeroBased(state)
   const common = toCommon(state)
 
   const base = [...Array(height + 1)].map(() =>
@@ -79,7 +76,7 @@ function renderToConsole(
   // prettier-ignore
   let screen = pipe(base)
     (
-      drawToScreen(common, renderMap, dimensions),
+      drawToScreen(common, renderMap, toZeroBased(state)),
       showLeftAndRightBorder,
       joinChars
     )
@@ -98,10 +95,17 @@ function renderToConsole(
   footer && footer(state)
 }
 
-function drawToScreen(state, renderMap, dimensions) {
+function toZeroBased(state) {
+  return {
+    width: state.view.width -1,
+    height: state.view.height -1,
+  }
+}
+
+function drawToScreen(state, renderMap, view) {
   return screen => {
     state.forEach(obj => {
-      if (isOnScreen(obj, dimensions)) {
+      if (isOnScreen(obj, view)) {
         screen[obj.y][obj.x + 1] = renderMap[obj.tag]
       }
     })
@@ -110,8 +114,8 @@ function drawToScreen(state, renderMap, dimensions) {
   }
 }
 
-function isOnScreen(obj, dimensions) {
-  const { width, height } = dimensions
+function isOnScreen(obj, view) {
+  const { width, height } = view
   return isInRange(0, obj.x, width) && isInRange(0, obj.y, height)
 }
 
@@ -142,7 +146,6 @@ function validateArgs(args) {
     toCommon,
     renderMap,
     inputMap,
-    dimensions,
     header,
     footer,
     timeBetweenRender,
@@ -171,10 +174,6 @@ function validateArgs(args) {
 
   if (!isObject(renderMap)) {
     throw Error(msg('renderMap') + 'an object.')
-  }
-  
-  if (!isObject(dimensions)) {
-    throw Error(msg('dimensions') + 'an object.')
   }
   
   // optional
