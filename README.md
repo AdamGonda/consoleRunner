@@ -6,7 +6,8 @@
 
 You just have to define your `initial state` and an `update` function
 then the loop takes care of the rest of it, calling update in each iteration
-with the `currentState` and an `input` if any, or terminating the cycle if the `isGameOver` is true or you press `q`.
+with the `currentState` and an `input` if any, or terminating the cycle if the
+`isGameOver` is true or you press `q`.
 
 # Example usage
 
@@ -20,7 +21,7 @@ npm install adamgonda/loop
 const { run } = require('console-runner')
 
 run({
-  initialState: { player: { x: 10, y: 5, isHappy: true }},
+  initialState: { player: { x: 10, y: 5, isHappy: true }, view: { width: 20, height: 10 }},
   update: (state, input) => state,
   toCommon: (state) => [{ ...state.player, tag: 'player' }],
   renderMap: { player: 'X' },
@@ -55,9 +56,16 @@ Loop exports one function `run`.
 
 ```js
 run({
-  // required: a starting point for a game
+  // required: starting point for a game
+  // it has to contain properties:
+  // isGameOver: boolean
+  // view: { width: number, height: number }
   // example 👇
-  initialState: { player: { x: 10, y: 5, isHappy: true }},
+  initialState: {
+    player: { x: 10, y: 5, isHappy: true },
+    view: { width: 20, height: 10 },
+    isGameOver: false,
+  },
 
   // required: implements the main game logic
   // example 👇
@@ -71,10 +79,6 @@ run({
   // required: maps tags to characters
   // example 👇
   renderMap: { player: 'X' },
-  
-  // required: determines how big the rendered view is
-  // example 👇
-  dimensions: { width: 20, height: 10 },
 
   // optional, maps a numeric character from the console to a value relevant to you
   // example 👇
