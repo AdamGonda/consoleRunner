@@ -2,10 +2,6 @@ function pipe(seed) {
   return (...ops) => ops.reduce((state, action) => action(state), seed)
 }
 
-function getRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
 function isInRange(start, num, end) {
   return num >= start && num <= end
 }
