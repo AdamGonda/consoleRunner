@@ -1,15 +1,17 @@
-<p align="left">
-  <img src="https://github.com/AdamGonda/loop/blob/main/logo-v2.png">
+<p align="center">
+  <img src="https://github.com/AdamGonda/loop/blob/main/logo-v3.jpg">
 </p>
 
-# The missing game loop for your Pure function
+<h2 align="center">
+  The missing game loop for your Pure function.
+</h2>
 
-You just have to define your `initial state` and an `update` function
-then the loop takes care of the rest of it, calling update in each iteration
-with the `currentState` and an `input` if any, or terminating the cycle if the
-`isGameOver` is true or you press `q`.
+You just have to define your `initial state` and an `update` function,
+then the loop takes care of the rest, it will call `update` in each iteration
+with the `currentState` and `input`, or it will terminate if the `isGameOver`
+property in your `state` is `true` or the user presses `q`.
 
-# Example usage
+## Example usage
 
 Install:
 ```console
@@ -18,7 +20,7 @@ npm install adamgonda/loop
 
 ```js
 // in your index.js
-const { run } = require('console-runner')
+const { run } = require('loop')
 
 run({
   initialState: { player: { x: 10, y: 5, isHappy: true }, view: { width: 20, height: 10 }},
@@ -29,8 +31,7 @@ run({
 })
 ```
 
-when you run `node ./index.js` it will produce
-a running app/game which looks like this 👇
+when you run `node ./index.js` it will produce a running game that looks like this 👇
 
 ```md
 { player: { x: 10, y: 5 } }
@@ -50,7 +51,7 @@ input null
 -----------------------
 ```
 
-# API
+## API
 
 Loop exports one function `run`.
 
