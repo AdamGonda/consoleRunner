@@ -63,8 +63,11 @@ Loop exports one function `run`.
 run({
   // required: starting point for a game
   // it has to contain properties:
-  // isGameOver: boolean
-  // view: { width: number, height: number }
+  //   loop uses this value to know when to terminate the game
+  //   isGameOver: boolean
+  //   
+  //   loop uses this to know how big the view has to be
+  //   view: { width: number, height: number }
   // example 👇
   initialState: {
     player: { x: 10, y: 5, isHappy: true },
